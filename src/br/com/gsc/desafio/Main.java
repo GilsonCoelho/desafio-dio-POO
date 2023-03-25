@@ -1,5 +1,6 @@
 package br.com.gsc.desafio;
 
+import br.com.gsc.desafio.dominio.Conteudo;
 import br.com.gsc.desafio.dominio.Curso;
 import br.com.gsc.desafio.dominio.Mentoria;
 
@@ -20,7 +21,6 @@ public class Main {
         curso2.setCargaHoraria(8);
 
         Mentoria mentoria1 = new Mentoria();
-
         mentoria1.setTitulo("Mentoria Java");
         mentoria1.setDescricao("Descricao mentoria java");
         mentoria1.setData(LocalDate.now());
