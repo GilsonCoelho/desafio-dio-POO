@@ -39,9 +39,11 @@ public class Main {
         devGilson.inscreverBootcamp(bootcamp);
         System.out.println("Conteudos Inscritos Gilson" + devGilson.getConteudosInscritos());
         devGilson.progradir();
+        devGilson.progradir();
         System.out.println("--");
         System.out.println("Conteudos Inscritos Gilson" + devGilson.getConteudosInscritos());
         System.out.println("Conteudos Concluidos Gilson" + devGilson.getConteudosConcluidos());
+        System.out.println("XP: " + devGilson.calcularTotalXp());
 
         System.out.println("----------------");
         Dev devCamila = new Dev();
@@ -49,8 +51,11 @@ public class Main {
         devCamila.inscreverBootcamp(bootcamp);
         System.out.println("Conteudos Inscritos Camila" + devCamila.getConteudosInscritos());
         devCamila.progradir();
+        devCamila.progradir();
+        devCamila.progradir();
         System.out.println("--");
         System.out.println("Conteudos Inscritos Camila" + devCamila.getConteudosInscritos());
         System.out.println("Conteudos Concluidos Camila" + devCamila.getConteudosConcluidos());
+        System.out.println("XP: " + devCamila.calcularTotalXp());
     }
 }
