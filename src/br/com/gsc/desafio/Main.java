@@ -1,8 +1,6 @@
 package br.com.gsc.desafio;
 
-import br.com.gsc.desafio.dominio.Conteudo;
-import br.com.gsc.desafio.dominio.Curso;
-import br.com.gsc.desafio.dominio.Mentoria;
+import br.com.gsc.desafio.dominio.*;
 
 import java.time.LocalDate;
 
@@ -25,8 +23,34 @@ public class Main {
         mentoria1.setDescricao("Descricao mentoria java");
         mentoria1.setData(LocalDate.now());
 
-        System.out.println(curso1);
-        System.out.println(curso2);
-        System.out.println(mentoria1);
+     //   System.out.println(curso1);
+     //   System.out.println(curso2);
+      //  System.out.println(mentoria1);
+
+        Bootcamp bootcamp = new Bootcamp();
+        bootcamp.setNome("Bootcamp Java Developer");
+        bootcamp.setDescricao("Descricao Bootcamp Java Developer");
+        bootcamp.getConteudos().add(curso1);
+        bootcamp.getConteudos().add(curso2);
+        bootcamp.getConteudos().add(mentoria1);
+
+        Dev devGilson = new Dev();
+        devGilson.setNome("Gilson");
+        devGilson.inscreverBootcamp(bootcamp);
+        System.out.println("Conteudos Inscritos Gilson" + devGilson.getConteudosInscritos());
+        devGilson.progradir();
+        System.out.println("--");
+        System.out.println("Conteudos Inscritos Gilson" + devGilson.getConteudosInscritos());
+        System.out.println("Conteudos Concluidos Gilson" + devGilson.getConteudosConcluidos());
+
+        System.out.println("----------------");
+        Dev devCamila = new Dev();
+        devCamila.setNome("Camila");
+        devCamila.inscreverBootcamp(bootcamp);
+        System.out.println("Conteudos Inscritos Camila" + devCamila.getConteudosInscritos());
+        devCamila.progradir();
+        System.out.println("--");
+        System.out.println("Conteudos Inscritos Camila" + devCamila.getConteudosInscritos());
+        System.out.println("Conteudos Concluidos Camila" + devCamila.getConteudosConcluidos());
     }
 }
